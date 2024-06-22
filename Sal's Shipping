@@ -1,0 +1,27 @@
+weight = 41.5
+premium_ground_Shipping_Cost = 125
+#Ground shiping 
+if weight <= 2:
+  gcost = 1.5*weight + 20
+elif 2 < weight <=6:
+  gcost = 3*weight + 20
+elif 6 < weight <= 10:
+  gcost = 4*weight + 20
+else: gcost = 4.75*weight + 20
+
+#Drone shipping
+if weight <= 2:
+  dcost = 4.5*weight
+elif 2 < weight <=6:
+  dcost = 9*weight
+elif 6 < weight <= 10:
+  dcost = 12*weight
+else: dcost = 14.25*weight
+
+
+print("cost of premium ground shipping: " + str(premium_ground_Shipping_Cost))
+
+
+if gcost>dcost:
+  print("The best service is drone delivery at: $" + str(dcost))
+else: print("The best service is ground delivery at: $" + str(gcost))
